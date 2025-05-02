@@ -1,0 +1,57 @@
+(Reading database ... 126105 files and directories currently installed.)
+Preparing to unpack cloudflared-linux-amd64.deb ...
+Unpacking cloudflared (2025.4.2) over (2025.4.2) ...
+Setting up cloudflared (2025.4.2) ...
+Processing triggers for man-db (2.10.2-1) ...
+Checkpoint files will always be loaded safely.
+Total VRAM 15095 MB, total RAM 12978 MB
+pytorch version: 2.7.0+cu126
+xformers version: 0.0.30
+Set vram state to: NORMAL_VRAM
+Device: cuda:0 Tesla T4 : cudaMallocAsync
+Using xformers attention
+Python version: 3.11.12 (main, Apr  9 2025, 08:55:54) [GCC 11.4.0]
+ComfyUI version: 0.3.30
+****** User settings have been changed to be stored on the server instead of browser storage. ******
+****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
+ComfyUI frontend version: 1.18.5
+[Prompt Server] web root: /usr/local/lib/python3.11/dist-packages/comfyui_frontend_package/static
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/ComfyUI/nodes.py", line 2128, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/content/drive/MyDrive/ComfyUI/comfy_extras/nodes_audio.py", line 3, in <module>
+    import torchaudio
+...
+
+
+✅ ComfyUI est lancé, démarrage de cloudflared...
+
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+Exception in thread Thread-12 (iframe_thread):
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.11/threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "<ipython-input-6-c90fd6db5915>", line 15, in iframe_thread
+NameError: name 'urllib' is not defined
+
+✅ ComfyUI est lancé, démarrage de cloudflared...
+
+🌐 Accès public ComfyUI : 
+🌐 Accès public ComfyUI : 
+
+ComfyUI finished loading, trying to launch localtunnel (if it gets stuck here localtunnel is having issues)
+
+🌐 Accès public ComfyUI : 
+🌐 Accès public ComfyUI : 
+
+Stopped server
+Exception ignored in: <function WeakValueDictionary.__init__.<locals>.remove at 0x7ec6f9e63240>
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/weakref.py", line 105, in remove
+    def remove(wr, selfref=ref(self), _atomic_removal=_remove_dead_weakref):
+
+KeyboardInterrupt: 
