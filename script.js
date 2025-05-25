@@ -59,9 +59,13 @@ function displayAdsOnIndexPage() {
         return;
     }
 
-    adsData.forEach(ad => {
+    adsData.forEach((ad, index) => { // Added index for potential stagger
         const adItem = document.createElement('div');
         adItem.classList.add('ad-item'); // Use the class from style.css
+        adItem.classList.add('fade-in-ad'); // Apply the fade-in animation class
+
+        // Optional: Stagger animation for multiple items
+        // adItem.style.animationDelay = `${index * 0.1}s`; // Simple stagger
 
         const title = document.createElement('h3');
         title.textContent = ad.title;
@@ -151,22 +155,23 @@ function handleAdSubmission() {
 
         // Create new ad object
         const newAd = {
-            id: nextAdId,
+            id: nextAdId, // Use the globally incrementing ID
             title: title,
             description: description,
-            price: price, // Storing as is, could be string or number
+            price: price, 
             contact: contact
         };
 
         // Add to adsData array
         adsData.push(newAd);
+        const newAdIdForRedirect = nextAdId; // Capture the ID before incrementing
         nextAdId++; // Increment for the next ad
 
         // Optional: Clear form fields
         form.reset();
 
-        // Success message and redirect
+        // Success message and redirect, passing the new ad's ID
         alert('Ad posted successfully!');
-        window.location.href = 'index.html'; // Redirect to home page
+        window.location.href = `index.html?new_ad_id=${newAdIdForRedirect}`; // Redirect to home page with new_ad_id
     });
 }
