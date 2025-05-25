@@ -46,10 +46,12 @@ nav ul li a {
     color: #fff;
     padding: 1em 1.5em; /* Padding for nav links */
     display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition */
 }
 
 nav ul li a:hover {
     background-color: #555; /* Hover effect for nav links */
+    color: #eee; /* Slightly lighten text color on hover */
 }
 
 /* Main Content Area Styling */
@@ -103,11 +105,14 @@ main h2 {
     cursor: pointer;
     font-size: 1.1em; /* Larger font size for button */
     border-radius: 3px; /* Rounded corners for button */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    /* Updated transition for multiple properties */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; 
 }
 
 #post-ad-form button[type="submit"]:hover {
     background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px) scale(1.02); /* Lift and scale effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for lift effect */
 }
 
 /* Ad Listing Styling (for index.html) */
@@ -117,6 +122,12 @@ main h2 {
     margin-bottom: 1em; /* Margin below each ad item */
     background-color: #f9f9f9; /* Light background for each ad item */
     border-radius: 3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+}
+
+.ad-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1); /* Shadow effect on hover */
 }
 
 .ad-item h3 { /* Styling for ad title within an ad item */
@@ -153,6 +164,47 @@ main h2 {
     color: #777;
     font-style: italic;
 }
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Optional: slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-ad {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeInFormElement {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group-animate {
+    opacity: 0; /* Start hidden */
+    animation: fadeInFormElement 0.5s ease-out forwards;
+}
+
+/* Staggered animation delays for form elements */
+#post-ad-form .form-group-animate:nth-child(1) { animation-delay: 0.1s; }
+#post-ad-form .form-group-animate:nth-child(2) { animation-delay: 0.2s; }
+#post-ad-form .form-group-animate:nth-child(3) { animation-delay: 0.3s; }
+#post-ad-form .form-group-animate:nth-child(4) { animation-delay: 0.4s; }
+/* The button is the 5th child with this class directly under the form */
+#post-ad-form button.form-group-animate { animation-delay: 0.5s; } 
+
 
 /* --- Responsive Design --- */
 
