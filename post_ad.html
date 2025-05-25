@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a New Ad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Post a New Ad</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="post_ad.html">Post an Ad</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="post-ad-form">
+            <div>
+                <label for="ad-title">Title:</label>
+                <input type="text" id="ad-title" name="ad-title" required>
+            </div>
+            <div>
+                <label for="ad-description">Description:</label>
+                <textarea id="ad-description" name="ad-description" required></textarea>
+            </div>
+            <div>
+                <label for="ad-price">Price:</label>
+                <input type="number" id="ad-price" name="ad-price" required>
+            </div>
+            <div>
+                <label for="ad-contact">Contact Email:</label>
+                <input type="email" id="ad-contact" name="ad-contact" required>
+            </div>
+            <button type="submit">Post Ad</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
