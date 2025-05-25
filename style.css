@@ -1,0 +1,253 @@
+/* General Body/HTML Styling */
+body {
+    font-family: Arial, sans-serif; /* Default font family */
+    margin: 0; /* Basic margin reset */
+    padding: 0; /* Basic padding reset */
+    background-color: #f0f0f0; /* Light background color for the body */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5em 0; /* Increased padding */
+    text-align: center;
+    margin-bottom: 1em; /* Margin below the header block */
+}
+
+header h1 {
+    margin: 0; /* Remove default h1 margin */
+    font-size: 2em; /* Larger font size for main titles */
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #444; /* Background color for the navigation bar */
+    padding: 0.5em 0; /* Padding around the nav bar */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default ul margin */
+    text-align: center;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center navigation items */
+}
+
+nav ul li {
+    display: inline; /* Keep inline for spacing, flex handles layout */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff;
+    padding: 1em 1.5em; /* Padding for nav links */
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Hover effect for nav links */
+}
+
+/* Main Content Area Styling */
+main {
+    padding: 1.5em; /* Padding for main content */
+    margin: 1em auto;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Slightly rounded corners for the main content block */
+}
+
+/* Headings in Main */
+main h2 {
+    color: #333;
+    margin-top: 0; /* Remove default top margin for h2 if it's the first element */
+    margin-bottom: 1em; /* Space below h2 */
+}
+
+/* Form Styling on post_ad.html */
+#post-ad-form div {
+    margin-bottom: 1.2em; /* Margin between form elements */
+}
+
+#post-ad-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold; /* Make labels bolder */
+}
+
+#post-ad-form input[type="text"],
+#post-ad-form input[type="number"],
+#post-ad-form input[type="email"],
+#post-ad-form textarea {
+    width: 100%; /* Full width for input fields */
+    padding: 0.8em; /* Increased padding for inputs */
+    border: 1px solid #ccc; /* Lighter border */
+    box-sizing: border-box;
+    border-radius: 3px; /* Slightly rounded corners for inputs */
+}
+
+#post-ad-form textarea {
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+#post-ad-form button[type="submit"] {
+    background-color: #28a745; /* More prominent green color for submit button */
+    color: #fff;
+    padding: 0.8em 1.8em; /* Adjusted padding for button */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em; /* Larger font size for button */
+    border-radius: 3px; /* Rounded corners for button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+#post-ad-form button[type="submit"]:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Ad Listing Styling (for index.html) */
+.ad-item {
+    border: 1px solid #ddd; /* Border for ad item */
+    padding: 1em; /* Padding within ad item */
+    margin-bottom: 1em; /* Margin below each ad item */
+    background-color: #f9f9f9; /* Light background for each ad item */
+    border-radius: 3px;
+}
+
+.ad-item h3 { /* Styling for ad title within an ad item */
+    margin-top: 0;
+    color: #007bff; /* Blue color for ad titles */
+}
+
+.ad-item p {
+    margin-bottom: 0.5em;
+}
+
+/* Ad Detail Styling (for ad.html) */
+.ad-detail-title {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.ad-detail-description {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 1em;
+    line-height: 1.7;
+}
+
+.ad-detail-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff; /* Blue color for price */
+}
+
+/* Utility class for placeholder text */
+.placeholder-text {
+    color: #777;
+    font-style: italic;
+}
+
+/* --- Responsive Design --- */
+
+/* For tablets and large phones (e.g., screens smaller than 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em; /* Slightly reduce header font size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center items when stacked */
+    }
+
+    nav ul li {
+        width: 100%; /* Make list items take full width */
+    }
+
+    nav ul li a {
+        display: block; /* Make links take full width for easier tapping */
+        width: 100%;
+        text-align: center;
+        padding: 0.8em 1em; /* Adjust padding for stacked links */
+        border-bottom: 1px solid #555; /* Add separator between links */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none; /* Remove border for the last item */
+    }
+
+    main {
+        width: 95%; /* Allow main content to use more screen width */
+        margin: 1em auto; /* Adjust margin for smaller screens */
+        padding: 1em; /* Reduce padding slightly */
+    }
+
+    .ad-detail-title {
+        font-size: 1.6em;
+    }
+
+    .ad-detail-description {
+        font-size: 1em;
+    }
+
+    .ad-detail-price {
+        font-size: 1.1em;
+    }
+}
+
+/* For small phones (e.g., screens smaller than 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Further reduce header font size */
+    }
+
+    nav ul li a {
+        padding: 0.7em 0.5em; /* Further adjust padding for very small screens */
+    }
+
+    main {
+        width: 98%; /* Utilize almost full screen width */
+        padding: 0.8em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    /* Form elements adjustments */
+    #post-ad-form label {
+        font-size: 0.95em; /* Slightly smaller labels */
+    }
+    
+    #post-ad-form input[type="text"],
+    #post-ad-form input[type="number"],
+    #post-ad-form input[type="email"],
+    #post-ad-form textarea {
+        padding: 0.7em; /* Slightly reduce padding in inputs */
+        font-size: 0.95em;
+    }
+
+    #post-ad-form button[type="submit"] {
+        font-size: 1em; /* Adjust button font size */
+        padding: 0.7em 1.2em; /* Adjust button padding */
+        width: 100%; /* Make button full width */
+    }
+
+    /* Ad item text size adjustments */
+    .ad-item h3 {
+        font-size: 1.1em;
+    }
+    .ad-item p {
+        font-size: 0.9em;
+    }
+
+    .ad-detail-title {
+        font-size: 1.4em;
+    }
+}
